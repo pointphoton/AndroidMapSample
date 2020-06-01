@@ -17,7 +17,7 @@ class SearchRepository(val network: MainNetwork) {
             placeLD.value = response
         } catch (cause: Throwable) {
             // If anything throws an exception, inform the caller
-            throw SearchPlaceError("Unable to fetch data", cause)
+            throw SearchPlaceError("Unable to fetch place information", cause)
         }
     }
 
@@ -29,80 +29,12 @@ class SearchRepository(val network: MainNetwork) {
             detailLD.value = response
         } catch (cause: Throwable) {
             // If anything throws an exception, inform the caller
-            throw SearchPlaceError("Unable to fetch data", cause)
+            throw SearchPlaceError("Unable to fetch detailed data", cause)
         }
     }
 
-    /*
-    suspend  fun searchWithName3(name :String){
 
-            // Make network request using a blocking call
-            val call = network.searchPlaceWithName(input = "ankara")
-            //nameLD.value =result
-           DebugLog.write(call.isSuccessful)
-
-           /* call.enqueue(object : Callback<SearchPlace> {
-                override fun onResponse(
-                    call: Call<SearchPlace>,
-                    response: Response<SearchPlace>
-                ) {
-                    if (response.code() == 200) {
-                        DebugLog.write(
-                            response.code().toString() + " " + Thread.currentThread()
-                                .name
-                        )
-                        // na.setValue(true)
-                    }
-                }
-
-                override fun onFailure(
-                    call: Call<SearchPlace>,
-                    t: Throwable
-                ) {
-                    DebugLog.write()
-                    // mldUpdateLevel.setValue(false)
-                }
-            })
-
-        } catch (cause: Throwable) {
-            // If anything throws an exception, inform the caller
-            throw SearchPlaceError("Unable to fetch data", cause)
-        }*/
-    }
-
-
-    fun searchWithName2(name :String){
-         val mThingSpeakService =
-             ThingSpeakServiceGenerator.createService(ThingSpeakService::class.java)
-         val call: Call<SearchPlace> =
-             mThingSpeakService.searchPlaceWithName(ThingSpeakServiceGenerator.API_KEY,"tr","ankara")
-
-         call.enqueue(object : Callback<SearchPlace> {
-             override fun onResponse(
-                 call: Call<SearchPlace>,
-                 response: Response<SearchPlace>
-             ) {
-                 if (response.code() == 200) {
-                     DebugLog.write(
-                         response.code().toString() + " " + Thread.currentThread()
-                             .name
-                     )
-                    // na.setValue(true)
-                 }
-             }
-
-             override fun onFailure(
-                 call: Call<SearchPlace>,
-                 t: Throwable
-             ) {
-                 DebugLog.write()
-                // mldUpdateLevel.setValue(false)
-             }
-         })
-    }
-*/
 }
 
 class SearchPlaceError(message: String, cause: Throwable?) : Throwable(message, cause)
 
-class APIError : Throwable()

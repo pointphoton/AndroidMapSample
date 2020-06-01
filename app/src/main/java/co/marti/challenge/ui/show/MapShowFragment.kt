@@ -5,13 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import co.marti.challenge.R
 import co.marti.challenge.network.model.detail.SearchDetail
+import co.marti.challenge.ui.detail.MapDetailDetailFragment
+import co.marti.challenge.ui.search.SearchFragmentDirections
 import co.marti.challenge.util.DebugLog
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-
+/**
+ * A simple [MapShowFragment] subclass as the second destination in the navigation.
+ */
 class MapShowFragment : Fragment(), OnMapReadyCallback {
 
     fun MapShowFragment() {}
@@ -46,6 +51,9 @@ class MapShowFragment : Fragment(), OnMapReadyCallback {
         mMap.setOnMarkerClickListener { marker ->
 
             marker.showInfoWindow()
+            val action = MapShowFragmentDirections.actionMapShowFragmentToMapDetailFragment(place)
+            findNavController().navigate(action)
+
             true
         }
         val loc = place.result.geometry.location

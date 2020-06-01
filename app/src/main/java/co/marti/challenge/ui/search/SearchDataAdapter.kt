@@ -17,8 +17,6 @@ class SearchDataAdapter(callback: SearchAdapterCallback):RecyclerView.Adapter<Se
     private var _predictions : ArrayList<Prediction?>? =null
 
 
-    //  private val predictions get() = _predictions!!
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PredictionsHolder {
          val layoutInflater = LayoutInflater.from(parent.context)
         val binding: ItemCustomBinding = DataBindingUtil.inflate(layoutInflater, R.layout.item_custom,parent,false)

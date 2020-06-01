@@ -20,7 +20,7 @@ import co.marti.challenge.network.model.place.SearchPlace
 import co.marti.challenge.util.DebugLog
 
 /**
- * A simple [Fragment] subclass as the default destination in the navigation.
+ * A simple [SearchFragment] subclass as the default destination in the navigation.
  */
 class SearchFragment : Fragment(), SearchHandlers, SearchAdapterCallback {
     private var _binding: FragmentSearchBinding? = null
@@ -53,17 +53,17 @@ class SearchFragment : Fragment(), SearchHandlers, SearchAdapterCallback {
 
 
         viewModel.place.observe(viewLifecycleOwner, Observer<SearchPlace> { value ->
-            // Update the UI, in this case, a TextView.
+            // Update the UI, in this case, the adapter of the recyclerview.
             value?.let {
                 DebugLog.write(it.status)
                 adapter.setPredictionsList(it.predictions)
             }
         })
         viewModel.detail.observe(viewLifecycleOwner, Observer<SearchDetail> { value ->
-            // Update the UI, in this case, a TextView.
+
             value?.let {
                 DebugLog.write(it.status)
-                val action=SearchFragmentDirections.actionSearchFragmentToMapShowFragment(it)
+                val action = SearchFragmentDirections.actionSearchFragmentToMapShowFragment(it)
                 findNavController().navigate(action)
             }
         })
@@ -72,7 +72,7 @@ class SearchFragment : Fragment(), SearchHandlers, SearchAdapterCallback {
         viewModel.spinner.observe(this.viewLifecycleOwner, Observer<Boolean> { value ->
             value?.let {
 
-                binding.isSpinnerVisible=it
+                binding.isSpinnerVisible = it
 
             }
         })
@@ -100,7 +100,6 @@ class SearchFragment : Fragment(), SearchHandlers, SearchAdapterCallback {
 
 
     override fun onClickSearch(view: View) {
-        // findNavController().navigate(R.id.action_SearchFragment_to_MapFragment)
         val text = binding.searchFrgToolbarEditTextSearch.text.toString();
         viewModel.searchWithName(text)
     }

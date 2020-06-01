@@ -14,11 +14,7 @@ class SearchViewModel(private val repository: SearchRepository) : ViewModel() {
 
 
     companion object {
-        /**
-         * Factory for creating [SearchViewModel]
-         *
-         * @param arg the repository to pass to [SearchViewModel]
-         */
+
         val FACTORY = singleArgViewModelFactory(::SearchViewModel)
     }
 

@@ -30,7 +30,7 @@
             android:id="@+id/action_MapShowFragment_to_MapDetailFragment"
             app:destination="@id/MapDetailFragment">
             <argument
-                android:name="place"
+                android:name="place2"
                 app:argType="co.marti.challenge.network.model.detail.SearchDetail"
                 app:nullable="true" />
         </action>
@@ -38,12 +38,12 @@
 
     <fragment
         android:id="@+id/MapDetailFragment"
-        android:name="co.marti.challenge.ui.detail.MapDetailFragment"
+        android:name="co.marti.challenge.ui.detail.MapDetailDetailFragment"
         android:label="@string/map_detail_fragment_label"
         tools:layout="@layout/fragment_map_detail">
         <action
             android:id="@+id/action_MapDetailFragment_to_SearchFragment"
-            app:destination="@id/MapDetailFragment"/>
+            app:destination="@id/SearchFragment"/>
     </fragment>
 
 </navigation>
