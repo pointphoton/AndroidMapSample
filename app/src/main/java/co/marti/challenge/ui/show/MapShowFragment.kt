@@ -61,7 +61,7 @@ class MapShowFragment : Fragment(), OnMapReadyCallback {
         // Add a marker in location and move the camera
         val pos = LatLng(loc.lat, loc.lng)
         mMap.addMarker(MarkerOptions().position(pos).title(name))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(pos))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pos,9f))
 
     }
 

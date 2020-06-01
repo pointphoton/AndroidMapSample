@@ -35,7 +35,7 @@ class SearchViewModel(private val repository: SearchRepository) : ViewModel() {
      *
      * This variable is private because we don't want to expose MutableLiveData
      *
-     * MutableLiveData allows anyone to set a value, and MainViewModel is the only
+     * MutableLiveData allows anyone to set a value, and SearchViewModel is the only
      * class that should be setting values.
      */
     private val _snackBar = MutableLiveData<String?>()
