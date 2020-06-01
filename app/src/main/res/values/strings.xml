@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MartiProje</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="search_fragment_label">Search Fragment</string>
+    <string name="map_show_fragment_label">Map Show Fragment</string>
+    <string name="map_detail_fragment_label">Map Detail Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="search_place_name_hint">Yer ismi giriniz.</string>
+</resources>

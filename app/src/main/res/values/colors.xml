@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorMainBg">#94BA65</color>
+    <color name="colorMainCardTopBg">#2790B0</color>
+    <color name="colorMainCardBottomBg">#2B4E72</color>
+    <color name="colorMainCardTopText">#D1C4E9</color>
+    <color name="colorMainCardBottomText">#C5CAE9</color>
+    <color name="colorCustomItem">#CEDBE1</color>
+    <color name="colorCustomItemBG">#DDE0F6</color>
+</resources>
