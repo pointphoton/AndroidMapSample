@@ -68,6 +68,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="26sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:textColor="@color/colorMainCardBottomBg"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -80,7 +82,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorMainCardTopBg"
             android:textSize="20sp"
-            android:layout_marginTop="24dp"
+
             android:padding="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
