@@ -91,4 +91,8 @@ lint/tmp/
 .Spotlight-V100
 .Trashes
 ehthumbs.db
+<<<<<<< HEAD
 Thumbs.db
+=======
+Thumbs.db
+>>>>>>> bc8aac1d58ad8fb464b6e345723f7e5dbeb877e9
