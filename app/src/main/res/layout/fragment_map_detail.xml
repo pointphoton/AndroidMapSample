@@ -95,6 +95,6 @@
 
         <variable
             name="handlers"
-            type="co.marti.challenge.ui.detail.MapDetailHandlers" />
+            type="co.maps.exmp.ui.detail.MapDetailHandlers" />
     </data>
 </layout>

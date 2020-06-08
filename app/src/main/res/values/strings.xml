@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MartiProje</string>
+    <string name="app_name">MapsProje</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="search_fragment_label">Search Fragment</string>

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/SearchFragment"
-        android:name="co.marti.challenge.ui.search.SearchFragment"
+        android:name="co.maps.exmp.ui.search.SearchFragment"
         android:label="@string/search_fragment_label"
         tools:layout="@layout/fragment_search">
 
@@ -16,13 +16,13 @@
             app:destination="@id/MapShowFragment">
             <argument
                 android:name="place"
-                app:argType="co.marti.challenge.network.model.detail.SearchDetail"
+                app:argType="co.maps.exmp.network.model.detail.SearchDetail"
                 app:nullable="true" />
         </action>
     </fragment>
     <fragment
         android:id="@+id/MapShowFragment"
-        android:name="co.marti.challenge.ui.show.MapShowFragment"
+        android:name="co.maps.exmp.ui.show.MapShowFragment"
         android:label="@string/map_show_fragment_label"
         tools:layout="@layout/fragment_map_show">
 
@@ -31,14 +31,14 @@
             app:destination="@id/MapDetailFragment">
             <argument
                 android:name="place2"
-                app:argType="co.marti.challenge.network.model.detail.SearchDetail"
+                app:argType="co.maps.exmp.network.model.detail.SearchDetail"
                 app:nullable="true" />
         </action>
     </fragment>
 
     <fragment
         android:id="@+id/MapDetailFragment"
-        android:name="co.marti.challenge.ui.detail.MapDetailDetailFragment"
+        android:name="co.maps.exmp.ui.detail.MapDetailDetailFragment"
         android:label="@string/map_detail_fragment_label"
         tools:layout="@layout/fragment_map_detail">
         <action

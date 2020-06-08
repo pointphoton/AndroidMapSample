@@ -54,11 +54,11 @@
         <import type="android.view.View"/>
         <variable
             name="prediction"
-            type="co.marti.challenge.network.model.place.Prediction" />
+            type="co.maps.exmp.network.model.place.Prediction" />
 
         <variable
             name="handler"
-            type="co.marti.challenge.ui.search.SearchDataHandlers" />
+            type="co.maps.exmp.ui.search.SearchDataHandlers" />
     </data>
 
 </layout>

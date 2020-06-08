@@ -100,6 +100,6 @@
 
         <variable
             name="handlers"
-            type="co.marti.challenge.ui.search.SearchHandlers" />
+            type="co.maps.exmp.ui.search.SearchHandlers" />
     </data>
 </layout>
